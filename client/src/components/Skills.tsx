@@ -52,15 +52,16 @@ export default function Skills() {
     <section className="py-24 relative" id="skills">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center" data-testid="text-skills-title">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center animate-fade-in" data-testid="text-skills-title">
             <span className="text-primary">{'{'}</span> Skills & Expertise <span className="text-primary">{'}'}</span>
           </h2>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {skills.map((skill) => (
+            {skills.map((skill, index) => (
               <Card 
                 key={skill.id}
-                className="p-6 border-primary/20 hover-elevate relative overflow-hidden group"
+                className="p-6 border-primary/20 hover-elevate relative overflow-hidden group animate-slide-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
                 data-testid={`card-skill-${skill.id}`}
               >
                 <div className="absolute top-0 right-0 w-24 h-24 -mr-12 -mt-12 opacity-5">

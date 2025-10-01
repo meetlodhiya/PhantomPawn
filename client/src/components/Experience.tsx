@@ -7,14 +7,14 @@ export default function Experience() {
     <section className="py-24 relative" id="experience">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center" data-testid="text-experience-title">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center animate-fade-in" data-testid="text-experience-title">
             <span className="text-primary">{'<'}</span> Experience <span className="text-primary">{'>'}</span>
           </h2>
           
           <div className="relative">
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-primary/20 hidden md:block" />
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-primary/20 hidden md:block animate-timeline-grow" />
             
-            <Card className="p-8 border-primary/20 hover-elevate relative" data-testid="card-experience-1">
+            <Card className="p-8 border-primary/20 hover-elevate relative animate-slide-up" data-testid="card-experience-1">
               <div className="flex flex-col md:flex-row gap-6">
                 <div className="flex-shrink-0">
                   <div className="w-16 h-16 bg-primary/10 rounded-md border border-primary/20 flex items-center justify-center relative z-10">

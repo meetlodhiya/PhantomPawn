@@ -6,11 +6,11 @@ export default function About() {
     <section className="py-24 relative" id="about">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center" data-testid="text-about-title">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center animate-fade-in" data-testid="text-about-title">
             <span className="text-primary">$</span> whoami
           </h2>
           
-          <Card className="p-8 border-primary/20">
+          <Card className="p-8 border-primary/20 animate-slide-up">
             <div className="flex items-start gap-3 mb-4">
               <Terminal className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
               <div className="flex-1">

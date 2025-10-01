@@ -22,15 +22,16 @@ export default function Certifications() {
     <section className="py-24 relative" id="certifications">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center" data-testid="text-certifications-title">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center animate-fade-in" data-testid="text-certifications-title">
             <span className="text-primary">[</span> Certifications <span className="text-primary">]</span>
           </h2>
           
           <div className="grid md:grid-cols-2 gap-6">
-            {certifications.map((cert) => (
+            {certifications.map((cert, index) => (
               <Card 
                 key={cert.id} 
-                className="p-8 border-primary/20 hover-elevate relative overflow-hidden group"
+                className="p-8 border-primary/20 hover-elevate relative overflow-hidden group animate-slide-up"
+                style={{ animationDelay: `${index * 0.2}s` }}
                 data-testid={`card-certification-${cert.id}`}
               >
                 <div className="absolute top-0 right-0 w-32 h-32 -mr-16 -mt-16 opacity-5">
