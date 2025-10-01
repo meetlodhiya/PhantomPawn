@@ -50,9 +50,12 @@ export default function Footer() {
             </div>
           </div>
           
-          <div className="mt-8 text-center">
+          <div className="mt-8 text-center space-y-2">
             <p className="text-xs text-muted-foreground italic">
               "Security is Myth"
+            </p>
+            <p className="text-sm text-card-foreground font-mono" data-testid="text-real-name">
+              <span className="text-primary">{'>'}</span> Meet Lodhiya
             </p>
           </div>
         </div>
