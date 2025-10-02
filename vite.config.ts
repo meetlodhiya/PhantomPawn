@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
+import path from "path"; // <-- import here
 
 const cartographerPlugin =
   process.env.NODE_ENV !== "production" && process.env.REPL_ID !== undefined
@@ -20,14 +21,16 @@ export default defineConfig({
     runtimeErrorOverlay(),
     ...(cartographerPlugin && devBannerPlugin ? [cartographerPlugin, devBannerPlugin] : []),
   ],
-
   root: "client",
-
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './client/src'), // alias configuration
+    },
+  },
   build: {
     outDir: "dist/public",
     emptyOutDir: true,
   },
-
   server: {
     fs: {
       strict: true,
