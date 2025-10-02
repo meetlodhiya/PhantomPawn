@@ -31,19 +31,19 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build:gh-pages
+        run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist/public
+          path: ./dist   # Make sure your build output folder here is 'dist'
 
   deploy:
+    needs: build
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
