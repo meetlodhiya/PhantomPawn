@@ -17,5 +17,5 @@ export default defineConfig({
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
   },
-  base: "/", // Change this to "/your-repo-name/" if not using custom domain
+  base: "/PhantomPawn/", // Changed to your GitHub repo name
 });
